@@ -8,9 +8,9 @@ final class SlideInPresentationAnimator: NSObject {
     
     let direction: JellyConstants.Direction
     let presentationType : JellyConstants.PresentationType
-    let presentation : JellySlideInPresentation
+    let presentation : SlideInPresentation
     
-    init(direction: JellyConstants.Direction, presentationType: JellyConstants.PresentationType, presentation: JellySlideInPresentation) {
+    init(direction: JellyConstants.Direction, presentationType: JellyConstants.PresentationType, presentation: SlideInPresentation) {
         self.direction = direction
         self.presentationType = presentationType
         self.presentation = presentation

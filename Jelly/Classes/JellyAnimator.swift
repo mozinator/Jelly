@@ -52,11 +52,11 @@ extension JellyAnimator: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-            if let presentation = self.presentation as? JellySlideInPresentation {
+            if let presentation = self.presentation as? SlideInPresentation {
                 return SlideInPresentationAnimator(direction: presentation.directionShow, presentationType: .show, presentation: presentation)
-            } else if let presentation = self.presentation as? JellyFadeInPresentation {
+            } else if let presentation = self.presentation as? FadeInPresentation {
                 return FadeInPresentationAnimator(presentationType: .show, presentation: presentation)
-            } else if let presentation = self.presentation as? JellyShiftInPresentation {
+            } else if let presentation = self.presentation as? ShiftInPresentation {
                 return ShiftInPresentationAnimator(direction: presentation.direction, presentationType: .show, presentation: presentation)
             } else {
                 return nil
@@ -65,11 +65,11 @@ extension JellyAnimator: UIViewControllerTransitioningDelegate {
     
     public func animationController(forDismissed dismissed: UIViewController)
         -> UIViewControllerAnimatedTransitioning? {
-            if let presentation = self.presentation as? JellySlideInPresentation {
+            if let presentation = self.presentation as? SlideInPresentation {
                 return SlideInPresentationAnimator(direction: presentation.directionDismiss, presentationType: .dismiss, presentation: presentation)
-            } else if let presentation = self.presentation as? JellyFadeInPresentation {
+            } else if let presentation = self.presentation as? FadeInPresentation {
                 return FadeInPresentationAnimator(presentationType: .dismiss, presentation: presentation)
-            } else if let presentation = self.presentation as? JellyShiftInPresentation {
+            } else if let presentation = self.presentation as? ShiftInPresentation {
                 return ShiftInPresentationAnimator(direction: presentation.direction, presentationType: .dismiss, presentation: presentation)
             } else {
                 return nil

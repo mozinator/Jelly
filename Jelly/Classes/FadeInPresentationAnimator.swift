@@ -7,9 +7,9 @@ import Foundation
 final class FadeInPresentationAnimator: NSObject {
     
     let presentationType : JellyConstants.PresentationType
-    let presentation : JellyFadeInPresentation
+    let presentation : FadeInPresentation
     
-    init(presentationType: JellyConstants.PresentationType, presentation: JellyFadeInPresentation) {
+    init(presentationType: JellyConstants.PresentationType, presentation: FadeInPresentation) {
         self.presentationType = presentationType
         self.presentation = presentation
         super.init()
